@@ -1,3 +1,5 @@
+//Eliminar o agregar otra sección, se puso como comentario en index
+
 const Architecture = () => {
   const pages = [
     { num: "01", title: "Home / Landing principal", desc: "Propuesta de valor, servicios, CTA principal", status: "launch" },
