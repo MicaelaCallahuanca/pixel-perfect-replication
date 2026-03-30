@@ -5,7 +5,7 @@ import Segments from "@/components/Segments";
 import Services from "@/components/Services";
 import Products from "@/components/Products";
 import Process from "@/components/Process";
-//import Architecture from "@/components/Architecture"; <Architecture /> debajo entre Process y CTA
+import Architecture from "@/components/Architecture";
 import CtaFinal from "@/components/CtaFinal";
 import Footer from "@/components/Footer";
 
@@ -19,6 +19,7 @@ const Index = () => {
       <Services />
       <Products />
       <Process />
+      <Architecture />
       <CtaFinal />
       <Footer />
     </>
