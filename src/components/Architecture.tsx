@@ -1,4 +1,4 @@
-{/*const Architecture = () => {
+const Architecture = () => {
   const pages = [
     { num: "01", title: "Home / Landing principal", desc: "Propuesta de valor, servicios, CTA principal", status: "launch" },
     { num: "02", title: "Página de servicios", desc: "Detalle de cada servicio, proceso y pricing", status: "launch" },
@@ -67,4 +67,4 @@
   );
 };
 
-export default Architecture;*/}
+export default Architecture;
