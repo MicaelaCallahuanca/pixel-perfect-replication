@@ -11,7 +11,7 @@ const Navbar = () => {
         <li><a href="#servicios" className="text-[13px] font-semibold tracking-wide text-foreground hover:text-primary transition-colors">Servicios</a></li>
         <li><a href="#recursos" className="text-[13px] font-semibold tracking-wide text-foreground hover:text-primary transition-colors">Recursos</a></li>
         <li><a href="#proceso" className="text-[13px] font-semibold tracking-wide text-foreground hover:text-primary transition-colors">Proceso</a></li>
-        <li><a href="#plataforma" className="text-[13px] font-semibold tracking-wide text-foreground hover:text-primary transition-colors">Plataforma</a></li>
+        <li><Link to="/plataforma" className="text-[13px] font-semibold tracking-wide text-foreground hover:text-primary transition-colors">Plataforma</Link></li>
       </ul>
       <a href="#contacto" className="bg-primary text-primary-foreground px-5 py-2.5 rounded text-[13px] font-bold tracking-wide hover:bg-primary-dim hover:-translate-y-px transition-all">
         Hablemos →
