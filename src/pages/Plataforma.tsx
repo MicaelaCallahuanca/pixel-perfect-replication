@@ -2,7 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 type UserRole = "emprendedor" | "crecimiento" | "aprendiz";
 
@@ -73,6 +74,18 @@ const ROLES: UserRole[] = ["emprendedor", "crecimiento", "aprendiz"];
 
 const Plataforma = () => {
   const [selectedRole, setSelectedRole] = useState<UserRole | null>(null);
+  const navigate = useNavigate();
+
+  // Mock authentication — change to true to simulate logged-in user
+  const [isAuthenticated] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate("/acceso", { replace: true });
+    }
+  }, [isAuthenticated, navigate]);
+
+  if (!isAuthenticated) return null;
 
   return (
     <>
