@@ -1,4 +1,4 @@
-export type UserRole = "emprendedor" | "crecimiento" | "aprendiz";
+export type UserRole = "emprendedor" | "negocio" | "aprendiz";
 
 export interface RoleConfig {
   label: string;
@@ -8,59 +8,71 @@ export interface RoleConfig {
 
 export const ROLE_CONTENT: Record<UserRole, RoleConfig> = {
   emprendedor: {
-    label: "Emprendedor arrancando",
-    description: "Recursos para dar tus primeros pasos con estructura y claridad.",
+    label: "Emprendedor",
+    description: "Guías básicas para arrancar con estructura y claridad.",
     sections: [
       {
-        title: "Recursos descargables",
-        items: ["Checklist de lanzamiento", "Template de plan de negocio", "Guía de primeros 90 días"],
+        title: "Guías básicas",
+        items: ["Cómo validar tu idea", "Pricing para principiantes", "Tu primera landing page", "Guía de primeros 90 días"],
       },
       {
-        title: "Guías simples",
-        items: ["Cómo validar tu idea", "Pricing para principiantes", "Tu primera landing page"],
+        title: "Templates",
+        items: ["Checklist de lanzamiento", "Template de plan de negocio", "Canvas de propuesta de valor"],
       },
       {
-        title: "Comunicación / soporte",
+        title: "Soporte",
         items: ["Acceso a comunidad Discord", "Q&A mensual en vivo"],
       },
     ],
   },
-  crecimiento: {
+  negocio: {
     label: "Negocio en crecimiento",
-    description: "Herramientas para escalar lo que ya funciona.",
+    description: "Servicios y optimización para escalar lo que ya funciona.",
     sections: [
       {
-        title: "Recursos descargables",
-        items: ["Playbook de escalamiento", "Dashboard de métricas", "Template de procesos"],
+        title: "Servicios",
+        items: ["Auditoría de funnel", "Setup de automatizaciones", "Estrategia de paid media", "Consultoría de pricing"],
       },
       {
-        title: "Guías simples",
-        items: ["Automatización de ventas", "Cómo delegar sin perder calidad", "Estrategia de contenido avanzada"],
+        title: "Optimización",
+        items: ["Dashboard de métricas clave", "Playbook de escalamiento", "Template de procesos operativos"],
       },
       {
-        title: "Comunicación / soporte",
+        title: "Soporte premium",
         items: ["Soporte prioritario por email", "Sesión estratégica 1:1 mensual", "Acceso a mastermind"],
       },
     ],
   },
   aprendiz: {
     label: "Aprendiz",
-    description: "Contenido educativo para desarrollar habilidades de marketing y negocio.",
+    description: "Recursos educativos para desarrollar habilidades de marketing y negocio.",
     sections: [
       {
-        title: "Recursos descargables",
+        title: "Recursos educativos",
+        items: ["Fundamentos de marketing digital", "Introducción a analytics", "Copywriting básico", "SEO para principiantes"],
+      },
+      {
+        title: "Material de práctica",
         items: ["Glosario de marketing digital", "Workbook de ejercicios", "Biblioteca de templates"],
       },
       {
-        title: "Guías simples",
-        items: ["Fundamentos de marketing", "Introducción a analytics", "Copywriting básico"],
-      },
-      {
-        title: "Comunicación / soporte",
-        items: ["Foro de preguntas", "Newsletter semanal con tips"],
+        title: "Comunidad",
+        items: ["Foro de preguntas", "Newsletter semanal con tips", "Retos semanales"],
       },
     ],
   },
 };
 
-export const ROLES: UserRole[] = ["emprendedor", "crecimiento", "aprendiz"];
+export const ROLES: UserRole[] = ["emprendedor", "negocio", "aprendiz"];
+
+export interface MockUser {
+  name: string;
+  email: string;
+  roles: UserRole[];
+}
+
+export const MOCK_USER: MockUser = {
+  name: "Usuario Demo",
+  email: "demo@scalecube.com",
+  roles: ["emprendedor", "aprendiz"],
+};

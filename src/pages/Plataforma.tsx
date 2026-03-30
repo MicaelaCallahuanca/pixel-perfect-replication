@@ -6,13 +6,12 @@ import PlataformaSidebar, { PlataformaView, NAV_ITEMS } from "@/components/plata
 import DashboardSection from "@/components/plataforma/DashboardSection";
 import RecursosSection from "@/components/plataforma/RecursosSection";
 import MiCuentaSection from "@/components/plataforma/MiCuentaSection";
-import { type UserRole } from "@/components/plataforma/roleData";
+import { MOCK_USER } from "@/components/plataforma/roleData";
 
 const Plataforma = () => {
   const navigate = useNavigate();
   const [isAuthenticated] = useState<boolean>(false);
   const [activeView, setActiveView] = useState<PlataformaView>("dashboard");
-  const [selectedRole, setSelectedRole] = useState<UserRole | null>(null);
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -47,9 +46,7 @@ const Plataforma = () => {
             ))}
           </div>
 
-          {activeView === "dashboard" && (
-            <DashboardSection selectedRole={selectedRole} onSelectRole={setSelectedRole} />
-          )}
+          {activeView === "dashboard" && <DashboardSection user={MOCK_USER} />}
           {activeView === "recursos" && <RecursosSection />}
           {activeView === "cuenta" && <MiCuentaSection />}
         </main>
