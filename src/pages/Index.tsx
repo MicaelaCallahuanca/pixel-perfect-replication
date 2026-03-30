@@ -5,7 +5,7 @@ import Segments from "@/components/Segments";
 import Services from "@/components/Services";
 import Products from "@/components/Products";
 import Process from "@/components/Process";
-import Architecture from "@/components/Architecture";
+//import Architecture from "@/components/Architecture"; |<Architecture />
 import CtaFinal from "@/components/CtaFinal";
 import Footer from "@/components/Footer";
 
@@ -19,7 +19,6 @@ const Index = () => {
       <Services />
       <Products />
       <Process />
-      <Architecture />
       <CtaFinal />
       <Footer />
     </>
