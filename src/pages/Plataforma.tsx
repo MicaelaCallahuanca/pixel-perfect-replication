@@ -74,6 +74,18 @@ const ROLES: UserRole[] = ["emprendedor", "crecimiento", "aprendiz"];
 
 const Plataforma = () => {
   const [selectedRole, setSelectedRole] = useState<UserRole | null>(null);
+  const navigate = useNavigate();
+
+  // Mock authentication — change to true to simulate logged-in user
+  const [isAuthenticated] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate("/acceso", { replace: true });
+    }
+  }, [isAuthenticated, navigate]);
+
+  if (!isAuthenticated) return null;
 
   return (
     <>
